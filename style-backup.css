@@ -37,14 +37,20 @@ nav {
   align-items: center;
 }
 
+/* Navigation logo */
+
 .logo {
-  font-size: 1.4rem;
-  font-weight: 900;
-  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
 }
 
-.logo span {
-  color: var(--gold);
+.nav-logo-img {
+  display: block;
+  width: 190px !important;
+  height: auto !important;
+  max-width: 190px !important;
 }
 
 .nav-links a {
