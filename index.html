@@ -648,11 +648,31 @@
 
     <div class="contact-form-card">
 
-     <form
+<div
+  class="form-success"
+  data-fs-success
+  hidden
+>
+  <div class="success-icon">✓</div>
+
+  <h3>Thanks — we got it.</h3>
+
+  <p>
+    Your project inquiry has been sent to Bridge Digital.
+    We'll be in touch soon.
+  </p>
+
+  <a href="#" class="success-back">
+    Back to Bridge Digital
+  </a>
+</div>
+
+<form
+  id="contact-form"
   class="project-form"
   action="https://formspree.io/f/meajkkra"
   method="POST"
-> 
+>
 
         <div class="form-row">
 
@@ -676,7 +696,8 @@
               id="business"
               name="business"
               placeholder="Your Business"
-            >
+              data-fs-field
+              >
           </div>
 
         </div>
@@ -691,6 +712,7 @@
             name="email"
             placeholder="you@yourbusiness.com"
             required
+            data-fs-field
           >
         </div>
 
@@ -743,6 +765,7 @@
   rows="5"
   required
   placeholder="What does your business do, and what would you like your website or software to help you accomplish?"
+  data-fs-field
 ></textarea>
         </div>
 
@@ -750,6 +773,7 @@
         <button
           type="submit"
           class="project-submit"
+          data-fs-submit-btn
         >
           Start My Project →
         </button>
@@ -770,19 +794,46 @@
     © 2026 Bridge Digital. Built in the Fox Valley.
   </footer>
 
+<!-- Package preselection script -->
 <script>
   const serviceSelect = document.getElementById("service");
 
   document.querySelectorAll("[data-service]").forEach(button => {
     button.addEventListener("click", () => {
-      const selectedService = button.dataset.service;
-
       if (serviceSelect) {
-        serviceSelect.value = selectedService;
+        serviceSelect.value = button.dataset.service;
       }
     });
   });
 </script>
 
+
+<!-- Formspree -->
+<script src="https://unpkg.com/@formspree/ajax@1"></script>
+
+<script>
+  formspree("initForm", {
+    formElement: "#contact-form",
+    formId: "meajkkra",
+
+    onSuccess: (context, result) => {
+      const form = document.getElementById("contact-form");
+      const success = document.querySelector("[data-fs-success]");
+
+      if (form) {
+        form.style.display = "none";
+      }
+
+      if (success) {
+        success.hidden = false;
+        success.setAttribute("data-fs-active", "");
+      }
+    }
+  });
+</script>
+
 </body>
 </html>
+
+
+

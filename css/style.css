@@ -1714,3 +1714,92 @@ footer {
   width: 100%;
   max-width: none;
 }
+
+.form-success {
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.success-icon {
+  width: 64px;
+  height: 64px;
+
+  display: grid;
+  place-items: center;
+
+  margin: 0 auto 22px;
+
+  border-radius: 50%;
+
+  background: var(--maroon);
+  color: var(--gold-light);
+
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+.form-success h3 {
+  margin: 0 0 12px;
+
+  color: var(--maroon-dark);
+
+  font-size: 2rem;
+}
+
+.form-success p {
+  max-width: 420px;
+
+  margin: 0 auto;
+
+  color: var(--muted);
+
+  line-height: 1.7;
+}
+
+.form-error {
+  color: #9f1d20;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.form-success[hidden] {
+  display: none !important;
+}
+
+.project-form.is-hidden {
+  display: none;
+}
+
+.form-success {
+  min-height: 520px;
+  padding: 70px 34px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.success-back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 28px;
+  padding: 14px 24px;
+
+  border-radius: 999px;
+
+  background: var(--maroon);
+  color: var(--white);
+
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.success-back:hover {
+  background: var(--gold);
+  color: var(--maroon-dark);
+}
