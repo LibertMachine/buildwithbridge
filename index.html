@@ -11,7 +11,12 @@
 
   <title>Bridge Digital | Websites, AI & Business Software</title>
 
- <link rel="stylesheet" href="css/style.css"> 
+ <meta
+  name="description"
+  content="Bridge Digital builds professional websites, custom business software, AI-powered tools, and managed website solutions for growing businesses."
+>
+ 
+  <link rel="stylesheet" href="css/style.css"> 
 
 <link rel="icon" type="image/x-icon" href="bridge-favicon.ico">
 
@@ -54,9 +59,13 @@
 
     <div class="hero-buttons">
 
-      <a class="btn btn-primary" href="#contact">
-        Start a Project
-      </a>
+      <a
+  class="btn btn-primary"
+  href="#contact"
+  data-service="unsure"
+>
+  Start a Project
+</a>
 
       <a class="btn btn-secondary" href="#work">
         See Our Work
@@ -684,6 +693,7 @@
               name="name"
               placeholder="John Smith"
               required
+              data-fs-field
             >
           </div>
 
@@ -719,7 +729,12 @@
         <div class="form-group">
           <label for="service">What are you interested in?</label>
 
-          <select id="service" name="service" required>
+          <select 
+          id="service" 
+          name="service" 
+          required
+          data-fs-field
+          >
 
             <option value="">
               Select a service
