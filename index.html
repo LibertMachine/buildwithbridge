@@ -147,10 +147,9 @@
 </section>
 
 <section id="packages">
-
-  <h2 class="section-title">Website packages.</h2>
-
-  <p class="section-intro">
+<h2 class="section-title">Website packages.</h2>
+ 
+<p class="section-intro">
     Simple options built around where your business is today
     and where you want it to go.
   </p>
@@ -831,6 +830,26 @@
     }
   });
 </script>
+
+<script>
+  if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+  }
+
+  function resetHomepageScroll() {
+    if (!window.location.hash) {
+      window.scrollTo(0, 0);
+
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+      }, 50);
+    }
+  }
+
+  window.addEventListener("load", resetHomepageScroll);
+  window.addEventListener("pageshow", resetHomepageScroll);
+</script>
+
 
 </body>
 </html>
