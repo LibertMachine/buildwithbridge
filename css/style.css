@@ -1389,6 +1389,12 @@ a.portfolio-link:hover {
 
 }
 
+@media (max-width: 768px) {
+  .social-links {
+    display: none;
+  }
+}
+
 
 @media (max-width: 560px) {
 
@@ -1797,4 +1803,36 @@ footer {
 .success-back:hover {
   background: var(--gold);
   color: var(--maroon-dark);
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 8px;
+}
+
+.social-links a {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+
+  transition: 0.2s ease;
+}
+
+.social-links svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.social-links a:hover {
+  transform: translateY(-2px);
+  border-color: currentColor;
 }
