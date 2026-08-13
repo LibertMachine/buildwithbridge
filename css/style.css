@@ -1861,3 +1861,38 @@ footer {
   transform: translateY(-2px);
   border-color: currentColor;
 }
+
+@media (max-width: 768px) {
+
+  .social-links {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+
+    width: 100%;
+    margin: 18px auto 0;
+  }
+
+  .social-links a {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 44px;
+
+    color: #f7f1e8;
+    border: 1px solid rgba(247, 241, 232, 0.25);
+    border-radius: 50%;
+  }
+
+  .social-links svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }
+}
