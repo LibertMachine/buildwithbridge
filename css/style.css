@@ -1391,7 +1391,32 @@ a.portfolio-link:hover {
 
 @media (max-width: 768px) {
   .social-links {
-    display: none;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 16px;
+    margin: 14px 0 0;
+  }
+
+  .social-links a {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+  }
+
+  .social-links svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+  }
+
+  .nav-links {
+    width: 100%;
   }
 }
 
