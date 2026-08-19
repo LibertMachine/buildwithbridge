@@ -34,7 +34,19 @@
       >
   </a>
 
-<div class="nav-links">
+<button
+  class="mobile-menu-toggle"
+  type="button"
+  aria-label="Open navigation menu"
+  aria-expanded="false"
+  aria-controls="mobile-navigation"
+>
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+  <div class="nav-links" id="mobile-navigation">
   <a href="#services">Services</a>
   <a href="#packages">Packages</a>
   <a href="#tending">Tending</a>
@@ -887,6 +899,36 @@
   window.addEventListener("pageshow", resetHomepageScroll);
 </script>
 
+<script>
+  const menuToggle = document.querySelector(".mobile-menu-toggle");
+  const nav = document.querySelector("header nav");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (menuToggle && nav && navLinks) {
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("is-open");
+
+      nav.classList.toggle("menu-open", isOpen);
+      menuToggle.classList.toggle("is-open", isOpen);
+
+      menuToggle.setAttribute("aria-expanded", isOpen);
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+      );
+    });
+
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("is-open");
+        nav.classList.remove("menu-open");
+        menuToggle.classList.remove("is-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+      });
+    });
+  }
+</script>
 
 </body>
 </html>
