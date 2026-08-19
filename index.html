@@ -199,31 +199,37 @@
 
   <div class="cards">
 
-    <!-- STARTER SITE -->
-    <div class="card package-card">
+  <!-- STARTER SITE -->
+  <div class="card package-card">
 
-      <h3>Starter Site</h3>
+    <h3>Starter Site</h3>
 
-      <p class="package-price">
-        <strong>Starting at $500</strong>
-      </p>
+    <p class="package-price">
+      <strong>Starting at $500</strong>
+    </p>
 
-      <p>
-        Perfect for a small business that needs a clean,
-        professional online presence.
-      </p>
+    <p>
+      Perfect for a small business that needs a clean,
+      professional online presence.
+    </p>
 
-  <a
-    href="#contact"
-    class="package-button"
-    data-service="starter"
-  >
-   
-   Get Started →
-  </a>
+    <ul class="package-features">
+      <li>Up to 3 custom pages</li>
+      <li>Mobile-responsive design</li>
+      <li>Contact &amp; lead form</li>
+      <li>Basic SEO setup</li>
+      <li>Domain connection &amp; launch</li>
+    </ul>
 
-    </div>
+    <a
+      href="#contact"
+      class="package-button"
+      data-service="starter"
+    >
+      Get Started →
+    </a>
 
+  </div>
 
     <!-- BUSINESS SITE -->
     <div class="card package-card">
@@ -238,6 +244,15 @@
         A complete business website with multiple pages,
         stronger lead generation, and room to grow.
       </p>
+
+     <ul class="package-features">
+  <li>Up to 7 custom pages</li>
+  <li>Mobile-responsive design</li>
+  <li>Advanced contact & lead forms</li>
+  <li>SEO & social sharing setup</li>
+  <li>Business integrations</li>
+  <li>Domain connection & launch</li>
+</ul> 
 
   <a
      href="#contact"
@@ -265,6 +280,14 @@
         custom workflows, and a stronger conversion system.
       </p>
 
+      <ul class="package-features">
+  <li>Everything in Business</li>
+  <li>Advanced website functionality</li>
+  <li>AI-powered features</li>
+  <li>Custom forms & workflows</li>
+  <li>Third-party integrations</li>
+  <li>Built around your business needs</li>
+</ul>
   <a
     href="#contact"
     class="package-button"
@@ -817,18 +840,22 @@
 ></textarea>
         </div>
 
+ <button 
+  type="submit" 
+  class="project-submit" 
+  data-fs-submit-btn 
+> 
+  Start My Project → 
+</button> 
 
-        <button
-          type="submit"
-          class="project-submit"
-          data-fs-submit-btn
-        >
-          Start My Project →
-        </button>
+<p class="form-error" id="form-error" hidden>
+  Something went wrong. Please try again, or email us directly at
+  info@buildwithbridge.dev.
+</p>
 
-        <p class="form-note">
-          No pressure. Just tell us what you're working on and we'll take it from there.
-        </p>
+<p class="form-note"> 
+  No pressure. Just tell us what you're working on and we'll take it from there. 
+</p>
 
       </form>
 
@@ -860,24 +887,37 @@
 <script src="https://unpkg.com/@formspree/ajax@1"></script>
 
 <script>
-  formspree("initForm", {
-    formElement: "#contact-form",
-    formId: "meajkkra",
+formspree("initForm", {
+  formElement: "#contact-form",
+  formId: "meajkkra",
 
-    onSuccess: (context, result) => {
-      const form = document.getElementById("contact-form");
-      const success = document.querySelector("[data-fs-success]");
+  onSuccess: (context, result) => {
+    const form = document.getElementById("contact-form");
+    const success = document.querySelector("[data-fs-success]");
+    const formError = document.getElementById("form-error");
 
-      if (form) {
-        form.style.display = "none";
-      }
-
-      if (success) {
-        success.hidden = false;
-        success.setAttribute("data-fs-active", "");
-      }
+    if (formError) {
+      formError.hidden = true;
     }
-  });
+
+    if (form) {
+      form.style.display = "none";
+    }
+
+    if (success) {
+      success.hidden = false;
+      success.setAttribute("data-fs-active", "");
+    }
+  },
+
+  onError: (context, error) => {
+    const formError = document.getElementById("form-error");
+
+    if (formError) {
+      formError.hidden = false;
+    }
+  }
+});
 </script>
 
 <script>
