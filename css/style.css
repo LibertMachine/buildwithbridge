@@ -1890,3 +1890,76 @@ button:focus-visible {
 .mobile-menu-toggle.is-open span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
 }
+
+/* =========================
+   LOCAL HERO TAGLINE
+========================= */
+
+.local-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 0.88;
+}
+
+.local-hero span {
+  display: block;
+}
+
+.hero-websites {
+  margin-bottom: 0.12em;
+}
+
+/* Service cascade */
+.hero-service-stack {
+  display: flex !important;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: -0.03em;
+  margin-bottom: 0.28em;
+}
+
+.hero-built {
+  font-size: 1em;
+  opacity: 1;
+}
+
+/* Bridge gold service cascade */
+.hero-hosted {
+  font-size: 0.58em;
+  color: var(--gold);
+  opacity: 0.90;
+  margin-left: 0.10em;
+  margin-top: 0.10em;
+}
+
+.hero-managed {
+  font-size: 0.50em;
+  color: var(--gold);
+  opacity: 0.72;
+  margin-left: 0.22em;
+  margin-top: 0.08em;
+}
+
+.hero-updated {
+  font-size: 0.43em;
+  color: var(--gold);
+  opacity: 0.54;
+  margin-left: 0.36em;
+  margin-top: 0.08em;
+}
+
+.hero-supported {
+  font-size: 0.36em;
+  color: var(--gold);
+  opacity: 0.45;
+  margin-left: 0.54em;
+  margin-top: 0.08em;
+}
+
+/* Final payoff */
+.hero-where {
+  font-size: 0.72em;
+  line-height: 0.95;
+  margin-top: 0.02em;
+}
