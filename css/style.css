@@ -328,29 +328,32 @@ header nav::after {
 }
 
 .hero-location {
-  margin-top: -12px;
+  margin-top: 14px;
 
   color: var(--gold-light);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 900;
-  letter-spacing: 0.32em;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
 
   opacity: 0;
-  transform: translateY(10px);
+  visibility: hidden;
+  transform: translateY(8px);
 
   transition:
     opacity 0.35s ease,
-    transform 0.35s ease;
+    transform 0.35s ease,
+    visibility 0.35s ease;
 }
 
 .hero-card:hover .hero-location {
   opacity: 1;
+  visibility: visible;
   transform: translateY(0);
 }
 
 .hero-card:hover .hero-card-content img {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
 }
 
 
