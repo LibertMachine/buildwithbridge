@@ -1915,7 +1915,9 @@ button:focus-visible {
 
 .social-links a:hover {
   transform: translateY(-2px);
-  border-color: currentColor;
+  color: var(--gold-light);
+  border-color: var(--gold-light);
+  background: rgba(217, 182, 111, 0.08);
 }
 
 
