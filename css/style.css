@@ -2082,3 +2082,852 @@ button:focus-visible {
   }
 }
 
+/* =========================================================
+   BRIDGE TENDING PRODUCT PAGE
+   ========================================================= */
+
+.tending-page {
+  background: var(--cream);
+  color: var(--ink);
+}
+
+
+/* ---------- TENDING HERO ---------- */
+
+.tending-page-hero {
+  max-width: none;
+  min-height: auto;
+
+  padding:
+    90px
+    max(24px, calc((100vw - var(--content)) / 2))
+    100px;
+
+  background:
+    radial-gradient(
+      circle at 78% 28%,
+      rgba(201, 156, 76, 0.15),
+      transparent 32%
+    ),
+    linear-gradient(
+      135deg,
+      #2a0b10 0%,
+      #351015 48%,
+      #22080c 100%
+    );
+
+  color: var(--white);
+}
+
+.tending-page-hero-grid {
+  max-width: var(--content);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.15fr)
+    minmax(340px, 0.85fr);
+
+  gap: 70px;
+  align-items: center;
+}
+
+.tending-page-eyebrow {
+  margin: 0 0 18px;
+
+  color: var(--gold-light);
+
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.tending-page-hero h1 {
+  max-width: 720px;
+  margin: 0 0 26px;
+
+  color: var(--white);
+
+  font-size: clamp(4rem, 6.5vw, 6.3rem);
+  font-weight: 900;
+  line-height: 0.94;
+  letter-spacing: -0.06em;
+}
+
+.tending-page-hero h1 span {
+  color: var(--gold-light);
+}
+
+.tending-page-hero-copy {
+  max-width: 650px;
+  margin: 0 0 36px;
+
+  color: rgba(255, 250, 240, 0.82);
+
+  font-size: 1.12rem;
+  line-height: 1.8;
+}
+
+.tending-page-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+
+/* ---------- STATUS PANEL ---------- */
+
+.tending-status-card {
+  overflow: hidden;
+
+  border:
+    1px solid rgba(217, 182, 111, 0.25);
+
+  border-radius: var(--radius-lg);
+
+  background:
+    rgba(255, 255, 255, 0.045);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.28);
+
+  backdrop-filter: blur(10px);
+}
+
+.tending-status-top {
+  padding: 24px 28px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.09);
+}
+
+.tending-status-top strong {
+  font-size: 1rem;
+}
+
+.tending-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: var(--gold-light);
+
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tending-live::before {
+  content: "";
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #5bd48c;
+
+  box-shadow:
+    0 0 0 5px rgba(91, 212, 140, 0.10);
+}
+
+.tending-status-list {
+  margin: 0;
+  padding: 14px 28px 24px;
+
+  list-style: none;
+}
+
+.tending-status-list li {
+  padding: 15px 0;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.07);
+
+  color: rgba(255, 250, 240, 0.67);
+}
+
+.tending-status-list li:last-child {
+  border-bottom: 0;
+}
+
+.tending-status-list strong {
+  color: var(--white);
+}
+
+
+/* ---------- INTRO / FEATURES ---------- */
+
+.tending-product-section {
+  max-width: none;
+
+  padding-right:
+    max(24px, calc((100vw - var(--content)) / 2));
+
+  padding-left:
+    max(24px, calc((100vw - var(--content)) / 2));
+}
+
+.tending-product-section.white {
+  background: var(--paper);
+}
+
+.tending-product-heading {
+  max-width: 800px;
+  margin: 0 auto 52px;
+
+  text-align: center;
+}
+
+.tending-product-heading .tending-page-eyebrow {
+  color: var(--gold);
+}
+
+.tending-product-heading h2 {
+  margin: 0 0 18px;
+
+  color: var(--ink);
+
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+}
+
+.tending-product-heading p {
+  max-width: 700px;
+  margin: 0 auto;
+
+  color: var(--muted);
+
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+.tending-feature-grid {
+  max-width: var(--content);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+.tending-product-feature {
+  padding: 30px;
+
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+
+  background: var(--paper);
+
+  box-shadow: var(--shadow-soft);
+
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    border-color var(--transition);
+}
+
+.tending-product-feature:hover {
+  transform: translateY(-5px);
+
+  border-color:
+    rgba(201, 156, 76, 0.42);
+
+  box-shadow:
+    0 20px 42px rgba(43, 13, 19, 0.14);
+}
+
+.tending-feature-number {
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 22px;
+
+  border-radius: 50%;
+
+  background: var(--maroon);
+
+  color: var(--gold-light);
+
+  font-size: 0.75rem;
+  font-weight: 900;
+}
+
+.tending-product-feature h3 {
+  margin: 0 0 10px;
+
+  color: var(--ink);
+
+  font-size: 1.25rem;
+}
+
+.tending-product-feature p {
+  margin: 0;
+
+  color: var(--muted);
+}
+
+
+/* ---------- PLANS ---------- */
+
+.tending-plans {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 28px;
+  align-items: stretch;
+}
+
+.tending-plan {
+  position: relative;
+
+  padding: 38px;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+
+  background: var(--paper);
+
+  box-shadow: var(--shadow-soft);
+}
+
+.tending-plan.premium {
+  overflow: hidden;
+
+  border:
+    2px solid rgba(201, 156, 76, 0.75);
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(201, 156, 76, 0.16),
+      transparent 36%
+    ),
+    var(--paper);
+
+  box-shadow:
+    0 28px 65px rgba(43, 13, 19, 0.16);
+}
+
+.tending-plan-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  padding: 7px 12px;
+
+  border-radius: var(--radius-pill);
+
+  background: var(--maroon);
+
+  color: var(--gold-light);
+
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+}
+
+.tending-plan-label {
+  margin-bottom: 8px;
+
+  color: var(--gold);
+
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.tending-plan h3 {
+  margin: 0;
+
+  color: var(--ink);
+
+  font-size: 2rem;
+}
+
+.tending-plan-price {
+  margin: 18px 0 6px;
+
+  color: var(--maroon);
+
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.tending-plan-price span {
+  color: var(--muted);
+
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.tending-plan-description {
+  min-height: 75px;
+  margin: 12px 0 24px;
+
+  color: var(--muted);
+}
+
+.tending-plan-features {
+  margin: 0 0 32px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.tending-plan-features li {
+  position: relative;
+
+  padding:
+    11px 0
+    11px 28px;
+
+  border-bottom:
+    1px solid var(--border-light);
+
+  color: var(--muted);
+}
+
+.tending-plan-features li::before {
+  content: "✓";
+
+  position: absolute;
+  left: 0;
+  top: 11px;
+
+  color: var(--gold);
+
+  font-weight: 900;
+}
+
+.tending-plan .package-button {
+  width: 100%;
+  margin-top: auto;
+}
+
+
+/* ---------- PREMIUM DETAIL ---------- */
+
+.tending-premium-section {
+  max-width: none;
+
+  padding-right:
+    max(24px, calc((100vw - var(--content)) / 2));
+
+  padding-left:
+    max(24px, calc((100vw - var(--content)) / 2));
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--maroon),
+      var(--maroon-dark)
+    );
+
+  color: var(--white);
+}
+
+.tending-premium-grid {
+  max-width: var(--content);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+
+  gap: 70px;
+  align-items: center;
+}
+
+.tending-premium-copy h2 {
+  margin: 0 0 22px;
+
+  color: var(--white);
+
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.tending-premium-copy p {
+  max-width: 560px;
+
+  color: rgba(255, 250, 240, 0.76);
+
+  line-height: 1.8;
+}
+
+.tending-premium-list {
+  display: grid;
+  gap: 13px;
+}
+
+.tending-premium-item {
+  padding: 20px 22px;
+
+  border:
+    1px solid rgba(217, 182, 111, 0.20);
+
+  border-radius: var(--radius-sm);
+
+  background:
+    rgba(255, 255, 255, 0.055);
+}
+
+.tending-premium-item strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: var(--gold-light);
+}
+
+.tending-premium-item span {
+  color: rgba(255, 250, 240, 0.68);
+
+  font-size: 0.92rem;
+}
+
+
+/* ---------- CLIENT BENEFIT ---------- */
+
+.tending-benefit {
+  max-width: var(--content);
+  margin: 0 auto;
+
+  padding: 50px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 40px;
+
+  border: 1px solid rgba(201, 156, 76, 0.42);
+  border-radius: var(--radius-lg);
+
+  background: var(--paper);
+
+  box-shadow: var(--shadow-soft);
+}
+
+.tending-benefit h2 {
+  margin: 0 0 12px;
+
+  color: var(--ink);
+
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.tending-benefit p {
+  max-width: 650px;
+  margin: 0;
+
+  color: var(--muted);
+}
+
+
+/* ---------- FINAL CTA ---------- */
+
+.tending-final-cta {
+  max-width: none;
+
+  padding:
+    110px
+    max(24px, calc((100vw - var(--content)) / 2));
+
+  background: var(--cream);
+
+  text-align: center;
+}
+
+.tending-final-cta h2 {
+  margin: 0 0 22px;
+
+  color: var(--ink);
+
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.tending-final-cta h2 span {
+  color: var(--maroon);
+}
+
+.tending-final-cta p {
+  max-width: 650px;
+  margin: 0 auto 30px;
+
+  color: var(--muted);
+
+  font-size: 1.05rem;
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 900px) {
+
+  .tending-page-hero-grid,
+  .tending-plans,
+  .tending-premium-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tending-page-hero {
+    padding-top: 70px;
+  }
+
+  .tending-status-card {
+    max-width: 650px;
+  }
+
+  .tending-feature-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .tending-benefit {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .tending-page-hero {
+    padding-top: 55px;
+    padding-bottom: 70px;
+  }
+
+  .tending-page-hero h1 {
+    font-size: clamp(3rem, 15vw, 4.2rem);
+  }
+
+  .tending-page-actions {
+    flex-direction: column;
+  }
+
+  .tending-page-actions .btn {
+    width: 100%;
+  }
+
+  .tending-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tending-plan {
+    padding: 30px 24px;
+  }
+
+  .tending-plan-description {
+    min-height: auto;
+  }
+
+  .tending-benefit {
+    padding: 32px 26px;
+  }
+}
+
+/* =====================================================
+   BRIDGE TENDING HERO CARD HOVER
+   ===================================================== */
+
+.tending-status-card {
+  position: relative;
+  overflow: hidden;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+
+/* Gold light sweep */
+
+.tending-status-card::before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 70%;
+  height: 100%;
+
+  background: linear-gradient(
+    110deg,
+    transparent,
+    rgba(217, 182, 111, 0.12),
+    transparent
+  );
+
+  transform: skewX(-18deg);
+
+  transition: left 0.7s ease;
+
+  pointer-events: none;
+}
+
+
+/* Lift the card */
+
+.tending-status-card:hover {
+  transform:
+    translateY(-8px)
+    scale(1.015);
+
+  border-color:
+    rgba(217, 182, 111, 0.45);
+
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.32),
+    0 0 35px rgba(201, 156, 76, 0.12);
+}
+
+
+/* Sweep the gold light across */
+
+.tending-status-card:hover::before {
+  left: 140%;
+}
+
+
+/* Make each status row react */
+
+.tending-status-list li {
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    padding-left 0.25s ease;
+}
+
+
+.tending-status-card:hover
+.tending-status-list li {
+  transform: translateX(4px);
+}
+
+
+/* Make TENDED glow */
+
+.tending-live {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.tending-status-card:hover
+.tending-live {
+  transform: scale(1.06);
+
+  box-shadow:
+    0 0 20px rgba(201, 156, 76, 0.25);
+}
+/* =====================================================
+   BRIDGE TENDING — 3D HERO CARD
+   ===================================================== */
+
+.tending-status-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.tending-status-card:hover {
+  border-color: rgba(217, 182, 111, 0.5);
+
+  box-shadow:
+    0 35px 80px rgba(0, 0, 0, 0.35),
+    0 0 40px rgba(201, 156, 76, 0.15);
+}
+
+/* Gives the content a little depth */
+
+.tending-status-card:hover
+.tending-status-top {
+  transform: translateZ(22px);
+}
+
+.tending-status-card:hover
+.tending-status-list {
+  transform: translateZ(14px);
+}
+
+.tending-status-top,
+.tending-status-list {
+  transition: transform 0.3s ease;
+}
+
+/* =====================================================
+   BRIDGE DIGITAL LOGO — FOX VALLEY HOVER
+   ===================================================== */
+
+.logo {
+  position: relative;
+}
+
+.logo-location {
+  position: absolute;
+
+  left: 50%;
+  bottom: 2px;
+
+  transform:
+    translateX(-50%)
+    translateY(-5px);
+
+  color: var(--gold-light);
+
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.22em;
+
+  white-space: nowrap;
+
+  opacity: 0;
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.logo:hover .logo-location {
+  opacity: 1;
+
+  transform:
+    translateX(-50%)
+    translateY(0);
+}
+
