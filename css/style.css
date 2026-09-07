@@ -2930,4 +2930,60 @@ button:focus-visible {
     translateX(-50%)
     translateY(0);
 }
+/* ========================================
+   PORTFOLIO PAGE
+======================================== */
 
+.portfolio-page {
+  padding-top: 70px;
+  padding-bottom: 100px;
+}
+
+.portfolio-page .section-title {
+  margin-top: 0;
+}
+
+.portfolio-page .section-intro {
+  margin-bottom: 45px;
+}
+
+.portfolio-page .portfolio-grid {
+  gap: 28px;
+}
+
+.portfolio-page-header {
+  min-height: auto;
+}
+
+/* ========================================
+   PORTFOLIO PAGE — 3 COLUMN GRID
+======================================== */
+
+.portfolio-page .portfolio-grid {
+  max-width: 1350px;
+  margin: 0 auto;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.portfolio-page .portfolio-frame {
+  height: 230px;
+}
+
+.portfolio-page .portfolio-preview-content {
+  min-height: 150px;
+  padding: 20px;
+}
+
+@media (max-width: 1000px) {
+  .portfolio-page .portfolio-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .portfolio-page .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}
