@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<link rel="stylesheet" href="contractor-portal.css">
+  
+    <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Contractor Portal | TONZ Construction</title>
+
+  <meta
+    name="description"
+    content="TONZ Construction contractor portal for project files, plans, specifications, schedules and subcontractor documents."
+  >
+
+  
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       HEADER
+       ===================================================== -->
+
+  <header class="portal-header">
+
+    <nav class="portal-nav">
+
+      <a
+        href="https://www.tonzconstruction.com/"
+        class="brand"
+      >
+        <span class="brand-main">
+          TONZ
+        </span>
+
+        <span class="brand-sub">
+          Construction
+        </span>
+      </a>
+
+
+      <div class="portal-nav-links">
+
+        <a href="#documents">
+          Documents
+        </a>
+
+        <a href="#upload">
+          Upload
+        </a>
+
+        
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+
+  <!-- =====================================================
+       HERO
+       ===================================================== -->
+
+  <section class="portal-hero">
+
+    <div class="portal-hero-inner">
+
+
+      <div>
+
+        <p class="eyebrow">
+          TONZ Construction
+        </p>
+
+        <h1>
+          Contractor
+          File Portal
+        </h1>
+
+        <p class="portal-hero-copy">
+
+          Access current plans, specifications,
+          schedules and project documents for your trade.
+
+          Select your subcontractor category below to
+          quickly find the files that apply to your work.
+
+        </p>
+
+      </div>
+
+
+      <aside class="portal-summary">
+
+        <div class="portal-summary-label">
+          Current Project
+        </div>
+
+        <h2 id="hero-project-name">
+          Oak Ridge Commercial Build
+        </h2>
+
+
+        <div class="summary-row">
+
+          <span>
+            Project Status
+          </span>
+
+          <strong>
+            Active
+          </strong>
+
+        </div>
+
+
+        <div class="summary-row">
+
+          <span>
+            Documents
+          </span>
+
+          <strong id="document-count">
+            6
+          </strong>
+
+        </div>
+
+
+        <div class="summary-row">
+
+          <span>
+            Last Updated
+          </span>
+
+          <strong>
+            Today
+          </strong>
+
+        </div>
+
+      </aside>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       PORTAL
+       ===================================================== -->
+
+  <main
+    class="portal-main"
+    id="documents"
+  >
+
+
+    <!-- PROJECT SELECTOR -->
+
+    <section class="project-bar">
+
+      <div>
+
+        <h2>
+          Project Documents
+        </h2>
+
+        <p>
+          Select a project to view its current files.
+        </p>
+
+      </div>
+
+
+      <select
+        class="project-select"
+        id="project-select"
+      >
+
+        <option
+          value="oak-ridge"
+        >
+          Oak Ridge Commercial Build
+        </option>
+
+        <option
+          value="green-bay-office"
+        >
+          Green Bay Office Renovation
+        </option>
+
+        <option
+          value="de-pere-shop"
+        >
+          De Pere Shop Expansion
+        </option>
+
+      </select>
+
+    </section>
+
+
+
+    <div class="portal-layout">
+
+
+      <!-- =================================================
+           TRADE FILTERS
+           ================================================= -->
+
+      <aside class="trade-sidebar">
+
+        <h3>
+          Subcontractor Type
+        </h3>
+
+
+        <button
+          class="trade-filter active"
+          data-trade="all"
+        >
+          All Documents
+        </button>
+
+
+        <button
+          class="trade-filter"
+          data-trade="electrical"
+        >
+          Electrical
+        </button>
+
+
+        <button
+          class="trade-filter"
+          data-trade="plumbing"
+        >
+          Plumbing
+        </button>
+
+
+        <button
+          class="trade-filter"
+          data-trade="hvac"
+        >
+          HVAC
+        </button>
+
+
+        <button
+          class="trade-filter"
+          data-trade="concrete"
+        >
+          Concrete
+        </button>
+
+
+        <button
+          class="trade-filter"
+          data-trade="framing"
+        >
+          Framing
+        </button>
+
+
+        <button
+          class="trade-filter"
+          data-trade="roofing"
+        >
+          Roofing
+        </button>
+
+
+        <button
+          class="trade-filter"
+          data-trade="drywall"
+        >
+          Drywall
+        </button>
+
+
+        <button
+          class="trade-filter"
+          data-trade="flooring"
+        >
+          Flooring
+        </button>
+
+
+        <button
+          class="trade-filter"
+          data-trade="painting"
+        >
+          Painting
+        </button>
+
+
+        <button
+          class="trade-filter"
+          data-trade="sitework"
+        >
+          Sitework
+        </button>
+
+
+        <button
+          class="trade-filter"
+          data-trade="general"
+        >
+          General Documents
+        </button>
+
+        <a
+          href="showcase-login.html"
+          class="trade-filter showcase-link"
+>
+          Showcase
+        </a>
+
+      </aside>
+
+
+
+      <!-- =================================================
+           FILE LIST
+           ================================================= -->
+
+      <section class="portal-content">
+
+        <div class="content-heading">
+
+          <div>
+
+            <p class="eyebrow">
+              Current Documents
+            </p>
+
+            <h2 id="trade-heading">
+              All Documents
+            </h2>
+
+            <p>
+              Most recent project files available to contractors.
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <div
+          class="file-list"
+          id="file-list"
+        >
+
+
+          <!-- ELECTRICAL -->
+
+          <article
+            class="file-card"
+            data-trade="electrical"
+          >
+
+            <div class="file-icon">
+              PDF
+            </div>
+
+            <div class="file-info">
+
+              <h3>
+                Electrical Plan Set - Rev 3
+              </h3>
+
+              <div class="file-meta">
+
+                <span class="file-trade">
+                  Electrical
+                </span>
+
+                <span>
+                  Updated Sept 5, 2026
+                </span>
+
+                <span>
+                  8.4 MB
+                </span>
+
+              </div>
+
+            </div>
+
+            <a
+              href="#"
+              class="download-button"
+            >
+              Download
+            </a>
+
+          </article>
+
+
+
+          <!-- PLUMBING -->
+
+          <article
+            class="file-card"
+            data-trade="plumbing"
+          >
+
+            <div class="file-icon">
+              PDF
+            </div>
+
+            <div class="file-info">
+
+              <h3>
+                Plumbing Specifications
+              </h3>
+
+              <div class="file-meta">
+
+                <span class="file-trade">
+                  Plumbing
+                </span>
+
+                <span>
+                  Updated Sept 4, 2026
+                </span>
+
+                <span>
+                  4.1 MB
+                </span>
+
+              </div>
+
+            </div>
+
+            <a
+              href="#"
+              class="download-button"
+            >
+              Download
+            </a>
+
+          </article>
+
+
+
+          <!-- HVAC -->
+
+          <article
+            class="file-card"
+            data-trade="hvac"
+          >
+
+            <div class="file-icon">
+              PDF
+            </div>
+
+            <div class="file-info">
+
+              <h3>
+                Mechanical / HVAC Drawings
+              </h3>
+
+              <div class="file-meta">
+
+                <span class="file-trade">
+                  HVAC
+                </span>
+
+                <span>
+                  Updated Sept 3, 2026
+                </span>
+
+                <span>
+                  6.8 MB
+                </span>
+
+              </div>
+
+            </div>
+
+            <a
+              href="#"
+              class="download-button"
+            >
+              Download
+            </a>
+
+          </article>
+
+
+
+          <!-- CONCRETE -->
+
+          <article
+            class="file-card"
+            data-trade="concrete"
+          >
+
+            <div class="file-icon">
+              DWG
+            </div>
+
+            <div class="file-info">
+
+              <h3>
+                Foundation Layout
+              </h3>
+
+              <div class="file-meta">
+
+                <span class="file-trade">
+                  Concrete
+                </span>
+
+                <span>
+                  Updated Sept 2, 2026
+                </span>
+
+                <span>
+                  12.7 MB
+                </span>
+
+              </div>
+
+            </div>
+
+            <a
+              href="#"
+              class="download-button"
+            >
+              Download
+            </a>
+
+          </article>
+
+
+
+          <!-- FRAMING -->
+
+          <article
+            class="file-card"
+            data-trade="framing"
+          >
+
+            <div class="file-icon">
+              PDF
+            </div>
+
+            <div class="file-info">
+
+              <h3>
+                Structural Framing Plans
+              </h3>
+
+              <div class="file-meta">
+
+                <span class="file-trade">
+                  Framing
+                </span>
+
+                <span>
+                  Updated Aug 30, 2026
+                </span>
+
+                <span>
+                  10.2 MB
+                </span>
+
+              </div>
+
+            </div>
+
+            <a
+              href="#"
+              class="download-button"
+            >
+              Download
+            </a>
+
+          </article>
+
+
+
+          <!-- GENERAL -->
+
+          <article
+            class="file-card"
+            data-trade="general"
+          >
+
+            <div class="file-icon">
+              PDF
+            </div>
+
+            <div class="file-info">
+
+              <h3>
+                Project Schedule
+              </h3>
+
+              <div class="file-meta">
+
+                <span class="file-trade">
+                  General
+                </span>
+
+                <span>
+                  Updated Sept 5, 2026
+                </span>
+
+                <span>
+                  1.2 MB
+                </span>
+
+              </div>
+
+            </div>
+
+            <a
+              href="#"
+              class="download-button"
+            >
+              Download
+            </a>
+
+          </article>
+
+        </div>
+
+
+
+        <div
+          class="empty-state"
+          id="empty-state"
+        >
+
+          No documents are currently available
+          for this subcontractor category.
+
+        </div>
+
+
+
+        <!-- =================================================
+             GENERAL CONTRACTOR UPLOAD PANEL
+             ================================================= -->
+
+        <section
+          class="upload-panel"
+          id="upload"
+        >
+
+          <p class="eyebrow">
+            General Contractor Access
+          </p>
+
+          <h2>
+            Upload Project Documents
+          </h2>
+
+          <p>
+
+            Assign each uploaded file to the trade
+            that should receive it.
+
+          </p>
+
+
+          <form
+            class="upload-form"
+            id="upload-form"
+          >
+
+
+            <div class="form-group">
+
+              <label for="upload-project">
+                Project
+              </label>
+
+              <select id="upload-project">
+
+                <option>
+                  Oak Ridge Commercial Build
+                </option>
+
+                <option>
+                  Green Bay Office Renovation
+                </option>
+
+                <option>
+                  De Pere Shop Expansion
+                </option>
+
+              </select>
+
+            </div>
+
+
+
+            <div class="form-group">
+
+              <label for="upload-trade">
+                Subcontractor Type
+              </label>
+
+              <select
+                id="upload-trade"
+                required
+              >
+
+                <option value="">
+                  Select Trade
+                </option>
+
+                <option value="electrical">
+                  Electrical
+                </option>
+
+                <option value="plumbing">
+                  Plumbing
+                </option>
+
+                <option value="hvac">
+                  HVAC
+                </option>
+
+                <option value="concrete">
+                  Concrete
+                </option>
+
+                <option value="framing">
+                  Framing
+                </option>
+
+                <option value="roofing">
+                  Roofing
+                </option>
+
+                <option value="drywall">
+                  Drywall
+                </option>
+
+                <option value="flooring">
+                  Flooring
+                </option>
+
+                <option value="painting">
+                  Painting
+                </option>
+
+                <option value="sitework">
+                  Sitework
+                </option>
+
+                <option value="general">
+                  General Documents
+                </option>
+
+              </select>
+
+            </div>
+
+
+
+            <div class="form-group full">
+
+              <label for="document-title">
+                Document Name
+              </label>
+
+              <input
+                id="document-title"
+                type="text"
+                placeholder="Example: Electrical Plan Set - Rev 4"
+                required
+              >
+
+            </div>
+
+
+
+            <div class="form-group full">
+
+              <label>
+                File
+              </label>
+
+
+              <label
+                class="file-drop-zone"
+                for="document-file"
+              >
+
+                <div>
+
+                  <strong id="file-message">
+                    Click to select project file
+                  </strong>
+
+                  PDF, DWG, XLSX, DOCX,
+                  images and other project documents
+
+                </div>
+
+              </label>
+
+
+              <input
+                type="file"
+                id="document-file"
+                required
+              >
+
+            </div>
+
+
+
+            <div class="form-group full">
+
+              <button
+                type="submit"
+                class="upload-button"
+              >
+                Upload Document
+              </button>
+
+            </div>
+
+
+          </form>
+
+        </section>
+
+      </section>
+
+    </div>
+
+  </main>
+
+
+
+  <footer class="portal-footer">
+
+  © 2026 Private Client ·
+  Contractor File Portal
+
+</footer>
+
+
+
+  <script>
+
+    /* =====================================================
+       TRADE FILTERING
+       ===================================================== */
+
+    const tradeButtons =
+      document.querySelectorAll(
+        ".trade-filter"
+      );
+
+
+    const fileCards =
+      document.querySelectorAll(
+        ".file-card"
+      );
+
+
+    const tradeHeading =
+      document.getElementById(
+        "trade-heading"
+      );
+
+
+    const emptyState =
+      document.getElementById(
+        "empty-state"
+      );
+
+
+    tradeButtons.forEach(
+      button => {
+
+        button.addEventListener(
+          "click",
+          () => {
+
+            tradeButtons.forEach(
+              item => {
+                item.classList.remove(
+                  "active"
+                );
+              }
+            );
+
+
+            button.classList.add(
+              "active"
+            );
+
+
+            const selectedTrade =
+              button.dataset.trade;
+
+
+            let visibleFiles = 0;
+
+
+            fileCards.forEach(
+              card => {
+
+                const matches =
+                  selectedTrade === "all" ||
+                  card.dataset.trade ===
+                    selectedTrade;
+
+
+                card.style.display =
+                  matches
+                    ? "grid"
+                    : "none";
+
+
+                if (matches) {
+                  visibleFiles++;
+                }
+
+              }
+            );
+
+
+            tradeHeading.textContent =
+              button.textContent.trim();
+
+
+            emptyState.style.display =
+              visibleFiles === 0
+                ? "block"
+                : "none";
+
+          }
+        );
+
+      }
+    );
+
+
+
+    /* =====================================================
+       FILE SELECTION
+       ===================================================== */
+
+    const documentFile =
+      document.getElementById(
+        "document-file"
+      );
+
+
+    const fileMessage =
+      document.getElementById(
+        "file-message"
+      );
+
+
+    documentFile.addEventListener(
+      "change",
+      () => {
+
+        if (
+          documentFile.files.length
+        ) {
+
+          fileMessage.textContent =
+            documentFile
+              .files[0]
+              .name;
+
+        }
+
+      }
+    );
+
+
+
+    /* =====================================================
+       DEMO UPLOAD BEHAVIOR
+
+       This currently demonstrates the interface only.
+
+       The real version will send files to secure
+       cloud storage and write document metadata to
+       a database.
+       ===================================================== */
+
+    const uploadForm =
+      document.getElementById(
+        "upload-form"
+      );
+
+
+    uploadForm.addEventListener(
+      "submit",
+      event => {
+
+        event.preventDefault();
+
+
+        alert(
+          "Upload interface is working. " +
+          "Next we connect this form to secure file storage."
+        );
+
+      }
+    );
+
+  </script>
+
+<script>
+  /* Showcase mode:
+     allow scrolling, block interaction
+  */
+
+  document.addEventListener("click", function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+  }, true);
+
+  document.addEventListener("submit", function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+  }, true);
+</script>
+</body>
+
+</html>

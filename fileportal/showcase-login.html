@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>TONZ Showcase Login</title>
+
+  <link
+    rel="stylesheet"
+    href="showcase.css"
+  >
+
+</head>
+
+<body>
+
+  <main class="login-page">
+
+    <section class="login-panel">
+
+      <a
+        href="contractor-portal.html"
+        class="back-link"
+      >
+        ← Back to Contractor Portal
+      </a>
+
+      <div class="login-brand">
+
+        <div class="brand-main">
+          TONZ
+        </div>
+
+        <div class="brand-sub">
+          Construction
+        </div>
+
+      </div>
+
+      <p class="eyebrow">
+        Owner Showcase
+      </p>
+
+      <h1>
+        Welcome Home
+      </h1>
+
+      <p class="login-copy">
+        Explore completed homes, model plans,
+        available products, appliances,
+        selections and owner resources.
+      </p>
+
+      <form
+        class="login-form"
+        id="showcase-login-form"
+      >
+
+        <label for="email">
+          Email Address
+        </label>
+
+        <input
+          type="email"
+          id="email"
+          placeholder="you@example.com"
+          required
+        >
+
+        <label for="password">
+          Password
+        </label>
+
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter your password"
+          required
+        >
+
+        <button
+          type="submit"
+          class="login-button"
+        >
+          Enter Showcase
+        </button>
+
+      </form>
+
+      <p class="login-note">
+        TONZ homeowners and approved clients only.
+      </p>
+
+    </section>
+
+    <section class="login-visual">
+
+      <div class="visual-overlay">
+
+        <p class="eyebrow">
+          Built by TONZ
+        </p>
+
+        <h2>
+          Your Home.
+          <br>
+          Your Choices.
+        </h2>
+
+        <p>
+          Browse model homes, completed projects,
+          appliances, finishes and available upgrades.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script>
+
+    const loginForm =
+      document.getElementById(
+        "showcase-login-form"
+      );
+
+    loginForm.addEventListener(
+      "submit",
+      event => {
+
+        event.preventDefault();
+
+        window.location.href =
+          "showcase.html";
+
+      }
+    );
+
+  </script>
+
+</body>
+
+</html>

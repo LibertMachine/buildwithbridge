@@ -1,0 +1,1314 @@
+/* =====================================================
+   TONZ CONSTRUCTION
+   CONTRACTOR FILE PORTAL
+   ===================================================== */
+
+/* =====================================================
+   TONZ CONSTRUCTION
+   CONTRACTOR FILE PORTAL
+   ===================================================== */
+
+:root {
+  --tonz-green: #17382f;
+  --tonz-green-dark: #0d2821;
+  --tonz-green-deep: #071b16;
+
+  --black: #0b0d0c;
+  --charcoal: #171a18;
+
+  --white: #ffffff;
+  --off-white: #f4f5f2;
+
+  --gray: #747a76;
+  --border: #d9ddda;
+}
+
+
+/* =====================================================
+   BASE
+   ===================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/* =====================================================
+   BASE
+   ===================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  background: #f3f3f1;
+  color: #202020;
+
+  line-height: 1.55;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+.portal-header {
+  background: #0b0d0c;
+  color: #ffffff;
+  border-bottom: 4px solid #17382f;
+}
+
+.portal-nav {
+  width: min(100%, 1320px);
+
+  min-height: 105px;
+
+  margin: 0 auto;
+  padding: 20px 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 40px;
+}
+
+
+/* =====================================================
+   BRAND
+   ===================================================== */
+
+.brand {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.brand-main {
+  display: block;
+
+  font-size: 2rem;
+  font-weight: 900;
+
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+
+.brand-sub {
+  display: block;
+
+  margin-top: 7px;
+
+  color: #c69232;
+
+  font-size: 0.72rem;
+  font-weight: 800;
+
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   NAV LINKS
+   ===================================================== */
+
+.portal-nav-links {
+  display: flex;
+  align-items: center;
+
+  gap: 36px;
+}
+
+.portal-nav-links a {
+  position: relative;
+
+  color: #dddddd;
+
+  text-decoration: none;
+
+  font-size: 0.9rem;
+  font-weight: 800;
+
+  transition:
+    color 0.2s ease;
+}
+
+.portal-nav-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -7px;
+
+  width: 0;
+  height: 2px;
+
+  background: #c69232;
+
+  transition:
+    width 0.25s ease;
+}
+
+.portal-nav-links a:hover {
+  color: #ffffff;
+}
+
+.portal-nav-links a:hover::after {
+  width: 100%;
+}
+
+
+/* =====================================================
+   HERO
+   ===================================================== */
+
+.portal-hero {
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 82% 22%,
+      rgba(255, 255, 255, 0.06),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #17382f 0%,
+      #0d2821 48%,
+      #071b16 100%
+    );
+
+  color: #ffffff;
+
+  padding: 90px 34px 100px;
+}
+
+.portal-hero::after {
+  content: "";
+
+  position: absolute;
+
+  right: -180px;
+  top: -180px;
+
+  width: 500px;
+  height: 500px;
+
+  border:
+    1px solid
+    rgba(198, 146, 50, 0.15);
+
+  border-radius: 50%;
+}
+
+.portal-hero-inner {
+  position: relative;
+  z-index: 2;
+
+  width: min(100%, 1260px);
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.15fr)
+    minmax(320px, 0.85fr);
+
+  gap: 90px;
+
+  align-items: center;
+}
+
+
+/* =====================================================
+   EYEBROW
+   ===================================================== */
+
+.eyebrow {
+  margin: 0 0 15px;
+
+  color: #d3a54d;
+
+  font-size: 0.78rem;
+  font-weight: 900;
+
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   HERO TEXT
+   ===================================================== */
+
+.portal-hero h1 {
+  max-width: 750px;
+
+  margin: 0;
+
+  font-size:
+    clamp(
+      3rem,
+      6vw,
+      5.8rem
+    );
+
+  line-height: 0.96;
+
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
+}
+
+.portal-hero-copy {
+  max-width: 690px;
+
+  margin:
+    28px
+    0
+    0;
+
+  color: #cfcfcf;
+
+  font-size: 1.08rem;
+
+  line-height: 1.75;
+}
+
+
+/* =====================================================
+   HERO PROJECT SUMMARY
+   ===================================================== */
+
+.portal-summary {
+  position: relative;
+
+  padding: 30px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.055
+    );
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.13
+    );
+
+  border-radius: 14px;
+
+  backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 28px 60px
+    rgba(0, 0, 0, 0.25);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.portal-summary:hover {
+  transform:
+    translateY(-5px);
+
+  border-color:
+    rgba(
+      198,
+      146,
+      50,
+      0.45
+    );
+
+  box-shadow:
+    0 34px 75px
+    rgba(0, 0, 0, 0.33);
+}
+
+.portal-summary-label {
+  margin-bottom: 8px;
+
+  color: #999999;
+
+  font-size: 0.72rem;
+  font-weight: 900;
+
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.portal-summary h2 {
+  margin: 0 0 24px;
+
+  font-size: 1.45rem;
+  line-height: 1.25;
+}
+
+.summary-row {
+  padding: 14px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  border-top:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.09
+    );
+
+  font-size: 0.9rem;
+}
+
+.summary-row span {
+  color: #999999;
+}
+
+.summary-row strong {
+  color: #d3a54d;
+}
+
+
+/* =====================================================
+   MAIN PORTAL
+   ===================================================== */
+
+.portal-main {
+  width: min(100%, 1320px);
+
+  margin: 0 auto;
+
+  padding:
+    64px
+    34px
+    110px;
+}
+
+
+/* =====================================================
+   PROJECT BAR
+   ===================================================== */
+
+.project-bar {
+  margin-bottom: 38px;
+
+  padding:
+    25px
+    28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  background: #ffffff;
+
+  border:
+    1px solid
+    #dddddd;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 10px 30px
+    rgba(0, 0, 0, 0.035);
+}
+
+.project-bar h2 {
+  margin: 0 0 4px;
+
+  font-size: 1.3rem;
+}
+
+.project-bar p {
+  margin: 0;
+
+  color: #737373;
+}
+
+.project-select {
+  min-width: 290px;
+
+  padding:
+    14px
+    16px;
+
+  border:
+    1px solid
+    #cccccc;
+
+  border-radius: 7px;
+
+  background: #ffffff;
+  color: #222222;
+
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   PORTAL GRID
+   ===================================================== */
+
+.portal-layout {
+  display: grid;
+
+  grid-template-columns:
+    255px
+    minmax(0, 1fr);
+
+  gap: 38px;
+}
+
+
+/* =====================================================
+   TRADE SIDEBAR
+   ===================================================== */
+
+.trade-sidebar {
+  align-self: start;
+
+  position: sticky;
+  top: 24px;
+
+  padding:
+    22px
+    17px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #1c1c1c,
+      #101010
+    );
+
+  color: #ffffff;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 20px 40px
+    rgba(0, 0, 0, 0.12);
+}
+
+.trade-sidebar h3 {
+  margin:
+    0
+    10px
+    17px;
+
+  color: #aaaaaa;
+
+  font-size: 0.72rem;
+  font-weight: 900;
+
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.trade-filter {
+  width: 100%;
+
+  margin-bottom: 5px;
+
+  padding:
+    12px
+    13px;
+
+  display: block;
+
+  border: 0;
+
+  border-radius: 6px;
+
+  background: transparent;
+  color: #cccccc;
+
+  text-align: left;
+
+  font-size: 0.9rem;
+  font-weight: 750;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.trade-filter:hover {
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.07
+    );
+
+  color: #ffffff;
+
+  transform:
+    translateX(3px);
+}
+
+.trade-filter.active {
+  background: #17382f;
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   PORTAL CONTENT
+   ===================================================== */
+
+.portal-content {
+  min-width: 0;
+}
+
+.content-heading {
+  margin-bottom: 25px;
+
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.content-heading h2 {
+  margin: 0 0 5px;
+
+  font-size: 2rem;
+}
+
+.content-heading p {
+  margin: 0;
+
+  color: #707070;
+}
+
+
+/* =====================================================
+   FILE LIST
+   ===================================================== */
+
+.file-list {
+  display: grid;
+
+  gap: 12px;
+}
+
+
+/* =====================================================
+   FILE CARD
+   ===================================================== */
+
+.file-card {
+  position: relative;
+
+  padding:
+    18px
+    20px;
+
+  display: grid;
+
+  grid-template-columns:
+    46px
+    minmax(0, 1fr)
+    auto;
+
+  gap: 17px;
+
+  align-items: center;
+
+  background: #ffffff;
+
+  border:
+    1px solid
+    #dedede;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.file-card::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 3px;
+  height: 100%;
+
+  background: #c69232;
+
+  transform:
+    scaleY(0);
+
+  transform-origin:
+    center;
+
+  transition:
+    transform 0.22s ease;
+}
+
+.file-card:hover {
+  transform:
+    translateY(-3px);
+
+  border-color:
+    rgba(
+      198,
+      146,
+      50,
+      0.55
+    );
+
+  box-shadow:
+    0 18px 35px
+    rgba(0, 0, 0, 0.08);
+}
+
+.file-card:hover::before {
+  transform:
+    scaleY(1);
+}
+
+
+/* =====================================================
+   FILE ICON
+   ===================================================== */
+
+.file-icon {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e5ece8;
+  color: #17382f;
+
+  border-radius: 7px;
+
+  font-size: 0.7rem;
+  font-weight: 900;
+}
+
+
+/* =====================================================
+   FILE INFO
+   ===================================================== */
+
+.file-info {
+  min-width: 0;
+}
+
+.file-info h3 {
+  margin: 0 0 6px;
+
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.file-meta {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap:
+    6px
+    16px;
+
+  color: #777777;
+
+  font-size: 0.8rem;
+}
+
+.file-trade {
+  color: #98691d;
+
+  font-weight: 900;
+}
+
+
+/* =====================================================
+   DOWNLOAD BUTTON
+   ===================================================== */
+
+.download-button {
+  min-width: 102px;
+
+  padding:
+    10px
+    15px;
+
+  border:
+    1px solid
+    #242424;
+
+  border-radius: 6px;
+
+  background: transparent;
+  color: #222222;
+
+  text-decoration: none;
+  text-align: center;
+
+  font-size: 0.78rem;
+  font-weight: 900;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.download-button:hover {
+  transform:
+    translateY(-1px);
+
+  background: #171717;
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   EMPTY STATE
+   ===================================================== */
+
+.empty-state {
+  display: none;
+
+  padding:
+    55px
+    30px;
+
+  background: #ffffff;
+
+  border:
+    1px dashed
+    #cccccc;
+
+  border-radius: 10px;
+
+  text-align: center;
+
+  color: #777777;
+}
+
+
+/* =====================================================
+   UPLOAD PANEL
+   ===================================================== */
+
+.upload-panel {
+  margin-top: 55px;
+
+  padding:
+    36px;
+
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(198, 146, 50, 0.12),
+      transparent 26%
+    ),
+    linear-gradient(
+      145deg,
+      #1d1d1d,
+      #0f0f0f
+    );
+
+  color: #ffffff;
+
+  border-radius: 13px;
+
+  box-shadow:
+    0 25px 55px
+    rgba(0, 0, 0, 0.18);
+}
+
+.upload-panel h2 {
+  margin:
+    0
+    0
+    8px;
+
+  font-size: 1.9rem;
+}
+
+.upload-panel > p {
+  max-width: 700px;
+
+  margin:
+    0
+    0
+    28px;
+
+  color: #aaaaaa;
+}
+
+
+/* =====================================================
+   UPLOAD FORM
+   ===================================================== */
+
+.upload-form {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.form-group.full {
+  grid-column:
+    1 / -1;
+}
+
+.form-group label {
+  color: #dddddd;
+
+  font-size: 0.74rem;
+  font-weight: 900;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+
+  padding:
+    14px
+    15px;
+
+  border:
+    1px solid
+    #454545;
+
+  border-radius: 7px;
+
+  background: #222222;
+  color: #ffffff;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #c69232;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(
+      198,
+      146,
+      50,
+      0.12
+    );
+}
+
+
+/* =====================================================
+   FILE DROP ZONE
+   ===================================================== */
+
+.file-drop-zone {
+  min-height: 165px;
+
+  padding:
+    32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border:
+    2px dashed
+    #4d4d4d;
+
+  border-radius: 9px;
+
+  background: #181818;
+
+  text-align: center;
+
+  color: #999999;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.file-drop-zone:hover {
+  border-color: #c69232;
+
+  background: #1c1c1c;
+}
+
+.file-drop-zone strong {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #ffffff;
+
+  font-size: 1rem;
+}
+
+#document-file {
+  display: none;
+}
+
+
+/* =====================================================
+   UPLOAD BUTTON
+   ===================================================== */
+
+.upload-button {
+  width: 100%;
+
+  padding: 15px 22px;
+
+  border: 2px solid #ffffff;
+  border-radius: 7px;
+
+  background: #ffffff;
+  color: #17382f;
+
+  font-weight: 900;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.upload-button:hover {
+  transform: translateY(-2px);
+
+  background: transparent;
+  color: #ffffff;
+}
+
+.upload-button:hover {
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 15px 28px
+    rgba(
+      198,
+      146,
+      50,
+      0.25
+    );
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+.portal-footer {
+  padding:
+    34px
+    24px;
+
+  background: #0f0f0f;
+
+  color: #888888;
+
+  border-top:
+    1px solid
+    #292929;
+
+  text-align: center;
+
+  font-size: 0.82rem;
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (
+  max-width: 900px
+) {
+
+  .portal-hero-inner {
+    grid-template-columns:
+      1fr;
+
+    gap: 45px;
+  }
+
+
+  .portal-layout {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .trade-sidebar {
+    position: static;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 7px;
+  }
+
+
+  .trade-sidebar h3 {
+    width: 100%;
+  }
+
+
+  .trade-filter {
+    width: auto;
+
+    margin: 0;
+  }
+
+
+  .project-bar {
+    align-items: stretch;
+
+    flex-direction: column;
+  }
+
+
+  .project-select {
+    width: 100%;
+    min-width: 0;
+  }
+
+
+  .upload-form {
+    grid-template-columns:
+      1fr;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (
+  max-width: 650px
+) {
+
+  .portal-nav {
+    min-height: 85px;
+
+    padding:
+      18px
+      22px;
+  }
+
+
+  .brand-main {
+    font-size: 1.6rem;
+  }
+
+
+  .portal-nav-links {
+    display: none;
+  }
+
+
+  .portal-hero {
+    padding:
+      65px
+      22px
+      70px;
+  }
+
+
+  .portal-hero h1 {
+    font-size:
+      clamp(
+        2.7rem,
+        14vw,
+        4.2rem
+      );
+  }
+
+
+  .portal-main {
+    padding:
+      45px
+      20px
+      80px;
+  }
+
+
+  .project-bar {
+    padding:
+      21px;
+  }
+
+
+  .content-heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+
+  .file-card {
+    grid-template-columns:
+      42px
+      minmax(0, 1fr);
+  }
+
+
+  .file-card
+  .download-button {
+    grid-column:
+      1 / -1;
+
+    width: 100%;
+  }
+
+
+  .upload-panel {
+    padding:
+      27px
+      21px;
+  }
+
+
+  .portal-summary {
+    padding:
+      24px;
+  }
+
+}
+
+.showcase-link {
+  display: block;
+  width: 100%;
+
+  text-decoration: none;
+  text-align: left;
+
+  color: inherit;
+}
+
+/* ========================================
+   PUBLIC SHOWCASE PRIVACY
+======================================== */
+
+.brand {
+  position: relative;
+  filter: blur(8px);
+  opacity: 0.55;
+  user-select: none;
+  pointer-events: none;
+}
+
+.portal-hero .eyebrow,
+.portal-hero .brand-name,
+.portal-hero [class*="brand"] {
+  filter: blur(7px);
+  opacity: 0.55;
+  user-select: none;
+}
+
+/* ========================================
+   PUBLIC SHOWCASE — CLIENT PRIVACY
+======================================== */
+
+/* Header company branding */
+.portal-header .brand {
+  filter: blur(7px);
+  opacity: 0.55;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Company name above Contractor File Portal */
+.portal-hero .eyebrow {
+  filter: blur(6px);
+  opacity: 0.5;
+  user-select: none;
+}
