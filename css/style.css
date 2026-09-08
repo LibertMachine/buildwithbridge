@@ -3246,6 +3246,9 @@ button:focus-visible {
 }
 
 .conversation-callout-inner {
+  position: relative;
+  overflow: hidden;
+
   max-width: 1130px;
   margin: 0 auto;
   padding: 42px 48px;
@@ -3258,11 +3261,6 @@ button:focus-visible {
 
   box-shadow:
     0 8px 24px rgba(64, 40, 30, 0.08);
-}
-
-.conversation-callout-inner {
-  position: relative;
-  overflow: hidden;
 
   transition:
     transform 0.25s ease,
@@ -3270,22 +3268,44 @@ button:focus-visible {
     border-color 0.25s ease;
 }
 
-.conversation-callout-inner:hover {
-  transform: translateY(-5px);
-  border-color: rgba(75, 23, 32, 0.16);
-
-  box-shadow:
-    0 16px 34px rgba(64, 40, 30, 0.12);
-}
-
 .conversation-callout-inner::after {
+  content: "";
+  position: absolute;
+
+  width: 120px;
+  height: 120px;
+
+  right: -55px;
+  bottom: -55px;
+
+  border-radius: 50%;
+  background: #f7f0df;
+
+  pointer-events: none;
+
   transition:
     transform 0.3s ease,
     opacity 0.3s ease;
 }
 
-.conversation-callout-inner:hover::after {
-  transform: scale(1.15);
+.conversation-callout-inner > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover animation only on devices that actually support hover */
+@media (hover: hover) and (pointer: fine) {
+  .conversation-callout-inner:hover {
+    transform: translateY(-5px);
+    border-color: rgba(75, 23, 32, 0.16);
+
+    box-shadow:
+      0 16px 34px rgba(64, 40, 30, 0.12);
+  }
+
+  .conversation-callout-inner:hover::after {
+    transform: scale(1.15);
+  }
 }
 
 .conversation-eyebrow {
@@ -3372,15 +3392,24 @@ button:focus-visible {
   line-height: 1;
 }
 
-@media (max-width: 650px) {
+/* =========================================
+   CONVERSATION CALLOUT — MOBILE
+   ========================================= */
 
+@media (max-width: 650px) {
   .conversation-callout {
     padding: 28px 16px;
   }
 
   .conversation-callout-inner {
-    padding: 30px 22px;
-    border-radius: 16px;
+  padding: 30px 22px;
+  border-radius: 18px;
+
+  background: #ffffff;
+  border: 1px solid #ebe6df;
+
+  box-shadow:
+    0 8px 24px rgba(64, 40, 30, 0.10);
   }
 
   .conversation-callout h2 {
@@ -3393,7 +3422,9 @@ button:focus-visible {
   }
 
   .conversation-callout .btn {
+    display: flex;
     width: 100%;
+    min-width: 0;
     text-align: center;
   }
 
@@ -3402,26 +3433,16 @@ button:focus-visible {
     padding: 7px 11px;
   }
 
-}
+  /* Touch feedback: same visual language as desktop hover */
+  .conversation-callout-inner:active {
+    transform: translateY(-3px);
+    border-color: rgba(75, 23, 32, 0.16);
 
-.conversation-callout-inner {
-  position: relative;
-  overflow: hidden;
-}
+    box-shadow:
+      0 14px 30px rgba(64, 40, 30, 0.12);
+  }
 
-.conversation-callout-inner::after {
-  content: "";
-  position: absolute;
-
-  width: 120px;
-  height: 120px;
-
-  right: -55px;
-  bottom: -55px;
-
-  border-radius: 50%;
-
-  background: #f7f0df;
-
-  pointer-events: none;
+  .conversation-callout-inner:active::after {
+    transform: scale(1.12);
+  }
 }
