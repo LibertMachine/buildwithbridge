@@ -3446,3 +3446,79 @@ button:focus-visible {
     transform: scale(1.12);
   }
 }
+
+/* =========================================
+   CONVERSATION CALLOUT — FINAL OVERRIDE
+   ========================================= */
+
+.conversation-callout-inner {
+  position: relative;
+  overflow: hidden;
+
+  max-width: 1130px;
+  margin: 0 auto;
+  padding: 42px 48px;
+
+  text-align: center;
+
+  background: #ffffff !important;
+  border: 1px solid #ebe6df !important;
+  border-radius: 18px !important;
+
+  box-shadow:
+    0 8px 24px rgba(64, 40, 30, 0.10) !important;
+}
+
+@media (max-width: 650px) {
+  .conversation-callout {
+    padding: 28px 16px;
+  }
+
+  .conversation-callout-inner {
+    padding: 30px 22px;
+    border-radius: 18px !important;
+  }
+
+  .conversation-callout .btn {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+/* =========================================
+   CONVERSATION CALLOUT — FINAL OVERRIDE
+   ========================================= */
+
+.conversation-callout-inner {
+  position: relative;
+  overflow: hidden;
+
+  max-width: 1130px;
+  margin: 0 auto;
+  padding: 42px 48px;
+
+  text-align: center;
+
+  background: #ffffff !important;
+  border: 1px solid #ebe6df !important;
+  border-radius: 18px !important;
+
+  box-shadow:
+    0 8px 24px rgba(64, 40, 30, 0.10) !important;
+}
+
+@media (max-width: 650px) {
+  .conversation-callout {
+    padding: 28px 16px;
+  }
+
+  .conversation-callout-inner {
+    padding: 30px 22px;
+    border-radius: 18px !important;
+  }
+
+  .conversation-callout .btn {
+    width: 100%;
+    min-width: 0;
+  }
+}
