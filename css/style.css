@@ -3175,13 +3175,26 @@ button:focus-visible {
   }
 
   .featured-product-details {
-    flex-direction: column;
-    gap: 28px;
-  }
+  grid-template-columns: 1fr;
+  gap: 28px;
+  padding: 32px 26px;
+}
 
-  .featured-product .portfolio-tech {
-    justify-content: flex-start;
-  }
+.featured-product-details > div:first-child {
+  max-width: none;
+  width: 100%;
+}
+
+.featured-product .portfolio-tech {
+  width: 100%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  justify-content: stretch;
+}
+
+.featured-product .portfolio-tech span {
+  width: 100%;
+  text-align: center;
+}
 
   .featured-product-browser .browser-address {
     margin: 0 12px;
