@@ -1586,101 +1586,40 @@ button:focus-visible {
    RESPONSIVE
    ========================================================= */
 
-@media (max-width: 1100px) {
-
-  header nav {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-
-  .logo img {
-    width: 240px !important;
-  }
-
-  .nav-links {
-    gap: 30px;
-  }
-
-  .hero {
-    padding-left: 32px;
-    padding-right: 32px;
-    gap: 48px;
-  }
-
-  .hero h1 {
-    font-size: clamp(3.5rem, 6vw, 5.2rem);
-  }
-}
-
 @media (max-width: 850px) {
 
-  header {
-    min-height: auto;
-  }
-
-  .nav-links a {
-    font-size: 0.95rem;
-  }
-
-  .hero {
-    min-height: auto;
-    padding: 72px 24px 84px;
-
-    grid-template-columns: 1fr;
-    gap: 48px;
-  }
-
-  .hero-text {
-    text-align: center;
-  }
-
-  .hero h1 {
-    max-width: 720px;
-    margin-left: auto;
-    margin-right: auto;
-
-    font-size: clamp(3.1rem, 11vw, 5rem);
-  }
-
-  .hero p {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-text .btn + .btn {
-    margin-left: 12px;
-  }
-
-  .hero-card {
-    max-width: 720px;
-    margin: 0 auto;
-  }
-
-  .hero-card img {
-    min-height: 410px;
-  }
-
-  section {
-    padding-top: 76px;
-    padding-bottom: 76px;
-  }
-
-  .services-grid,
-  .cards,
-  .portfolio-grid,
-  .tending-card {
+  .yore-feature-grid {
     grid-template-columns: 1fr;
   }
 
-  .tending-main,
-  .tending-offer {
-    padding: 32px 26px;
+  .yore-solution,
+  .yore-problem {
+    padding: 80px 7%;
   }
 
-  .portfolio-frame {
-    height: 350px;
+  .yore-feature {
+    padding: 30px;
   }
+
+  .yore-includes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .yore-includes {
+    padding: 80px 7%;
+  }
+
+  .yore-ownership-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .yore-ownership {
+    padding: 80px 7%;
+  }
+
 }
+
+
 
 
 @media (max-width: 560px) {
@@ -3530,4 +3469,505 @@ button:focus-visible {
     width: 100%;
     min-width: 0;
   }
+}
+
+/* ========================================
+   YORESTORE — PROBLEM SECTION
+======================================== */
+
+.yore-problem {
+  padding: 120px 8%;
+  background: #ffffff;
+}
+
+.yore-problem-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.yore-problem .section-eyebrow {
+  margin-bottom: 24px;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  color: #8b1e2d;
+}
+
+.yore-problem h2 {
+  max-width: 750px;
+  margin: 0 0 32px;
+
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+
+  color: #111111;
+}
+
+.yore-problem h2 span {
+  display: block;
+  color: #d5a84b;
+}
+
+.yore-problem .yore-lead {
+  max-width: 720px;
+  margin-bottom: 24px;
+
+  font-size: 1.35rem;
+  line-height: 1.6;
+  font-weight: 600;
+
+  color: #222222;
+}
+
+.yore-problem p:not(.section-eyebrow):not(.yore-lead) {
+  max-width: 720px;
+  margin-bottom: 18px;
+
+  font-size: 1.05rem;
+  line-height: 1.75;
+
+  color: #555555;
+}
+
+/* ========================================
+   YORESTORE — SOLUTION SECTION
+======================================== */
+
+.yore-solution {
+  padding: 120px 8%;
+  background: #f7ecd3;
+}
+
+.yore-solution-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.yore-solution .section-eyebrow {
+  margin-bottom: 24px;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  color: #8b1e2d;
+}
+
+.yore-solution h2 {
+  margin: 0 0 28px;
+
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+
+  color: #111111;
+}
+
+.yore-solution h2 span {
+  display: block;
+  color: #d5a84b;
+}
+
+.yore-solution-lead {
+  max-width: 760px;
+  margin-bottom: 56px;
+
+  font-size: 1.25rem;
+  line-height: 1.6;
+
+  color: #444444;
+}
+
+.yore-feature-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+.yore-feature {
+  padding: 36px;
+
+  background: #ffffff;
+
+  border-radius: 18px;
+}
+
+.yore-feature-number {
+  display: block;
+  margin-bottom: 36px;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+
+  color: #8b1e2d;
+}
+
+.yore-feature h3 {
+  margin: 0 0 14px;
+
+  font-size: 1.7rem;
+
+  color: #111111;
+}
+
+.yore-feature p {
+  margin: 0;
+
+  font-size: 1rem;
+  line-height: 1.7;
+
+  color: #555555;
+}
+
+@media (max-width: 850px) {
+
+  .yore-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .yore-solution,
+  .yore-problem {
+    padding: 80px 7%;
+  }
+
+  .yore-feature {
+    padding: 30px;
+  }
+
+}
+
+/* ========================================
+   YORESTORE — OWNERSHIP
+======================================== */
+
+.yore-ownership {
+  padding: 120px 8%;
+  background: var(--maroon);
+  color: var(--white);
+}
+
+.yore-ownership-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.yore-ownership .section-eyebrow {
+  margin-bottom: 24px;
+
+  color: var(--gold-light);
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.yore-ownership h2 {
+  max-width: 850px;
+  margin: 0 0 28px;
+
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+
+  color: var(--white);
+}
+
+.yore-ownership h2 span {
+  display: block;
+  color: var(--gold-light);
+}
+
+.yore-ownership-lead {
+  max-width: 720px;
+  margin-bottom: 56px;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+.yore-ownership-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.yore-ownership-card {
+  padding: 38px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.ownership-label {
+  margin: 0 0 18px;
+
+  color: var(--gold-light);
+
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.yore-ownership-card h3 {
+  margin: 0 0 28px;
+
+  font-size: 1.7rem;
+  line-height: 1.2;
+}
+
+.yore-ownership-card ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.yore-ownership-card li {
+  padding: 13px 0;
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.10);
+
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.yore-ownership-card li:last-child {
+  border-bottom: 0;
+}
+
+.yore-ownership-note {
+  max-width: 800px;
+  margin: 34px 0 0;
+
+  color: rgba(255, 255, 255, 0.58);
+
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* ========================================
+   YORESTORE — OFFER
+======================================== */
+
+.yore-offer {
+  padding: 120px 8%;
+  background: var(--cream);
+}
+
+.yore-offer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.yore-offer .section-eyebrow {
+  margin-bottom: 32px;
+
+  color: var(--maroon);
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.yore-offer-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(340px, 0.9fr);
+  gap: 70px;
+  align-items: center;
+}
+
+.yore-offer-copy h2 {
+  margin: 0 0 28px;
+
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+
+  color: var(--ink);
+}
+
+.yore-offer-copy h2 span {
+  display: block;
+  color: var(--gold);
+}
+
+.yore-offer-copy p {
+  max-width: 600px;
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 1.1rem;
+  line-height: 1.75;
+}
+
+
+/* ---------- PRICE CARD ---------- */
+
+.yore-price-card {
+  padding: 42px;
+
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+
+  background: var(--paper);
+
+  box-shadow: var(--shadow-soft);
+}
+
+.yore-price-label {
+  margin: 0 0 28px;
+
+  color: var(--maroon);
+
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.yore-price {
+  margin-bottom: 24px;
+}
+
+.yore-price span {
+  display: block;
+  margin-bottom: 4px;
+
+  color: var(--muted);
+
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.yore-price strong {
+  display: block;
+
+  color: var(--maroon);
+
+  font-size: clamp(3.2rem, 5vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.yore-price-description {
+  margin: 0 0 30px;
+
+  color: var(--muted);
+
+  line-height: 1.7;
+}
+
+.yore-price-card .btn {
+  width: 100%;
+}
+
+/* ========================================
+   YORESTORE — INCLUDED DESKTOP FIX
+======================================== */
+
+.yore-includes {
+  padding: 120px 8%;
+  background: var(--paper);
+}
+
+.yore-includes-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.yore-includes h2 {
+  max-width: 1050px;
+  margin: 0 0 56px;
+  font-size: clamp(2.4rem, 4vw, 3.8rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.yore-includes h2 span {
+  display: block;
+  color: var(--gold);
+}
+
+.yore-includes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  overflow: hidden;
+
+  background: var(--border-light);
+}
+
+.yore-include-item {
+  padding: 34px;
+  background: var(--paper);
+}
+
+.yore-include-item h3 {
+  margin: 0 0 10px;
+  font-size: 1.3rem;
+  color: var(--maroon);
+}
+
+.yore-include-item p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* ========================================
+   YORESTORE — FINAL MOBILE OVERRIDE
+======================================== */
+
+@media (max-width: 850px) {
+
+  .yore-feature-grid,
+  .yore-includes-grid,
+  .yore-ownership-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .yore-solution,
+  .yore-problem,
+  .yore-includes,
+  .yore-ownership {
+    padding: 80px 7%;
+  }
+
+  .yore-feature,
+  .yore-ownership-card {
+    padding: 30px;
+  }
+
+.yore-offer-grid {
+  grid-template-columns: 1fr;
+  gap: 48px;
+}
+
+.yore-price-card {
+  padding: 30px;
+}
+
+.yore-price-card .btn {
+  width: 100%;
+}
+
+
 }
