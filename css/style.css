@@ -3971,3 +3971,98 @@ button:focus-visible {
 
 
 }
+
+/* =========================================
+   GLOBAL MOBILE LAYOUT FIX
+   ========================================= */
+
+@media (max-width: 850px) {
+
+  /* Homepage hero */
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: center;
+    min-width: 0;
+  }
+
+  .hero-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+
+  /* Services */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* Website packages */
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* Bridge Tending homepage card */
+  .tending-card {
+    grid-template-columns: 1fr;
+  }
+
+  .tending-main,
+  .tending-offer {
+    min-width: 0;
+  }
+
+
+  /* Portfolio */
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+
+  .hero {
+    width: 100%;
+    padding: 58px 18px 70px;
+    gap: 36px;
+  }
+
+  .hero h1 {
+    max-width: 100%;
+    font-size: clamp(2.8rem, 13vw, 4rem);
+    overflow-wrap: normal;
+  }
+
+  .hero-card {
+    border-radius: 20px;
+  }
+
+  .hero-card-content {
+    min-height: 360px;
+  }
+
+  .cards {
+    gap: 20px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 26px;
+  }
+
+  .tending-main,
+  .tending-offer {
+    padding: 30px 24px;
+  }
+
+  .tending-card {
+    width: 100%;
+  }
+}
