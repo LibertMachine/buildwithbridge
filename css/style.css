@@ -320,10 +320,9 @@ header nav::after {
 .hero-card img {
   display: block;
   width: 100%;
-  max-height: 390px;
+  max-height: 430px;
   object-fit: contain;
-  padding: 48px 58px 20px;
-
+  padding: 20px 22px 10px;
   transition: transform 0.35s ease;
 }
 
@@ -1982,6 +1981,11 @@ button:focus-visible {
 }
 
 @media (max-width: 768px) {
+
+  .logo img {
+    width: 165px !important;
+    height: auto !important;
+  }
 
   .hero-text {
     text-align: center;
