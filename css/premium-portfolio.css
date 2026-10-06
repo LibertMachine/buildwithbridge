@@ -1,3 +1,60 @@
 /* Portfolio follows the shared premium navigation and product palette. */
 .premium-portfolio .portfolio-premium-hero{max-width:none;background:radial-gradient(ellipse at 85% 15%,rgba(201,156,76,.13),transparent 55%),linear-gradient(125deg,#26090e,#4b1720);text-align:left;padding:65px 32px}.portfolio-hero-inner{max-width:1112px;margin:auto}.premium-portfolio .portfolio-premium-hero h1{font-size:clamp(2rem,3.7vw,3.4rem);max-width:820px;margin:0 0 22px;line-height:1.12;letter-spacing:-.04em}.premium-portfolio .portfolio-premium-hero>div>p:not(.product-kicker):not(.seo-eyebrow){max-width:700px;margin:0 0 28px;color:#e1d3c2;font-size:1.06rem;line-height:1.8}.premium-portfolio .portfolio-premium-hero .seo-eyebrow{font-size:.7rem;margin:0 0 22px;letter-spacing:.13em}.premium-portfolio .portfolio-premium-hero .btn{border-radius:10px;font-size:.9rem}.premium-portfolio .portfolio-page{max-width:1176px;padding:60px 32px}.portfolio-section-heading{margin-bottom:32px}.portfolio-section-heading .product-kicker{color:#96703a}.portfolio-section-heading h2{font-size:clamp(1.7rem,2.8vw,2.6rem);line-height:1.15;letter-spacing:-.045em;margin:12px 0 0}.premium-portfolio .portfolio-grid{gap:28px}.premium-portfolio .portfolio-preview{border:1px solid #e7dbc6;border-radius:15px;box-shadow:0 10px 30px rgba(43,13,19,.06);background:#fffaf0;overflow:hidden}.premium-portfolio .portfolio-preview-content{padding:25px}.premium-portfolio .portfolio-preview-content h3{font-size:1.3rem;letter-spacing:-.03em}.premium-portfolio .portfolio-label{font-size:.65rem;letter-spacing:.13em;color:#96703a}.premium-portfolio .portfolio-tech span{border-radius:6px;font-size:.7rem}.premium-portfolio .portfolio-browser-bar{background:#efe5d4}.premium-portfolio .seo-story-callout{max-width:none;background:#efe4d0;padding:54px 24px}.premium-portfolio .seo-story-callout h2{max-width:760px;margin:0 auto 20px;font-size:clamp(1.7rem,2.8vw,2.4rem);letter-spacing:-.04em;line-height:1.2}.premium-portfolio .seo-story-callout p{color:#70645d}.premium-portfolio .seo-story-callout a{display:inline-block;margin-top:12px}
 @media(max-width:760px){.premium-portfolio .portfolio-premium-hero{padding:42px 22px}.premium-portfolio .portfolio-page{padding:42px 22px}.premium-portfolio .portfolio-grid{grid-template-columns:1fr}.premium-portfolio .product-wordmark{font-size:clamp(2.5rem,9vw,3.5rem)}.premium-portfolio .portfolio-preview-content{padding:20px;flex-wrap:wrap;gap:16px}}
+/* Correct inherited portfolio colors and sizing */
+.premium-portfolio .portfolio-page {
+  background: transparent;
+  color: var(--ink);
+}
+
+.premium-portfolio .portfolio-preview {
+  min-width: 0;
+}
+
+.premium-portfolio .portfolio-preview-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  min-height: 0;
+  color: var(--ink);
+}
+
+.premium-portfolio .portfolio-preview-content > div {
+  width: 100%;
+  min-width: 0;
+}
+
+.premium-portfolio .portfolio-preview-content h3 {
+  color: var(--ink);
+  margin: 10px 0 16px;
+}
+
+.premium-portfolio .portfolio-label {
+  color: #84612c;
+}
+
+.premium-portfolio .portfolio-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.premium-portfolio .portfolio-tech span {
+  color: #65491f;
+  background: #f0e5d1;
+  border-color: #ddc9a5;
+}
+
+.premium-portfolio .portfolio-link {
+  color: var(--maroon);
+  white-space: normal;
+}
+
+.premium-portfolio .portfolio-link-disabled {
+  color: var(--muted);
+}
+
+.premium-portfolio .browser-address {
+  color: #655643;
+}
