@@ -4070,3 +4070,5 @@ button:focus-visible {
     width: 100%;
   }
 }
+/* Local search context and crawlable service links */
+.hero-local-description{max-width:620px;color:var(--cream);font-size:clamp(1rem,1.4vw,1.15rem);line-height:1.7;margin:22px 0 28px}.seo-service-link{display:inline-block;margin-top:14px;color:var(--maroon);font-weight:700;text-underline-offset:4px}.seo-local-intro{max-width:900px;margin:32px auto 0;padding:0 24px;text-align:center}.seo-story-callout{padding-top:30px;text-align:center}
