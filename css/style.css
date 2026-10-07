@@ -12,6 +12,7 @@
   --maroon-deep: #190609;
 
   --gold: #c99c4c;
+  --gold-accessible: #75520d;
   --gold-light: #d9b66f;
   --cream: #f6ead3;
   --white: #fffaf0;
@@ -626,7 +627,7 @@ header nav::after {
 
 .tending-eyebrow {
   margin: 0 0 12px;
-  color: var(--gold);
+  color: var(--gold-accessible);
   text-align: center;
   font-size: 0.78rem;
   font-weight: 900;
@@ -659,7 +660,7 @@ header nav::after {
 
 .tending-label {
   margin: 0 0 4px;
-  color: var(--gold);
+  color: var(--gold-accessible);
   font-size: 0.75rem;
   font-weight: 900;
   letter-spacing: 0.10em;
@@ -3054,7 +3055,7 @@ button:focus-visible {
   max-width: 620px;
   font-size: 0.98rem;
   line-height: 1.75;
-  color: rgba(65, 40, 45, 0.66);
+  color: var(--muted);
 }
 
 .featured-product .portfolio-tech {
