@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>What Happened Here? | Wisconsin</title>
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+
+  <link rel="stylesheet" href="css/style.css?v=4" />
+</head>
+
+<body>
+
+  <header class="app-header">
+    <div class="brand">
+      <p class="eyebrow">WISCONSIN HISTORY</p>
+      <h1>What Happened Here?</h1>
+      <p class="tagline">There’s a story under your feet.</p>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="controls">
+
+  <button id="locationBtn" class="primary-btn">
+    Use My Location
+  </button>
+
+  <div class="radius-controls">
+
+    <button
+      class="radius-btn"
+      data-radius="1"
+      disabled
+    >
+      1 Mile
+    </button>
+
+    <button
+      class="radius-btn"
+      data-radius="5"
+      disabled
+    >
+      5 Miles
+    </button>
+
+    <button
+      class="radius-btn"
+      data-radius="20"
+      disabled
+    >
+      20 Miles
+    </button>
+
+    <button
+      class="radius-btn active"
+      data-radius="all"
+    >
+      All Wisconsin
+    </button>
+
+  </div>
+
+  <p id="locationHint" class="location-hint">
+    Use your location to explore stories near you.
+  </p>
+
+  
+  <div class="story-type-filter">
+    <p class="filter-label">Story Type</p>
+  
+    <div class="story-type-buttons">
+      <button
+        class="story-type-btn active"
+        data-marker-type="All"
+      >
+        All Stories
+      </button>
+  
+      <button
+        class="story-type-btn"
+        data-marker-type="history"
+      >
+        History
+      </button>
+  
+      <button
+        class="story-type-btn"
+        data-marker-type="water"
+      >
+        Water
+      </button>
+    
+      <button
+      class="story-type-btn"
+      data-marker-type="outdoors"
+    >
+      Outdoors
+    </button>
+    
+    </div>
+  </div>
+  
+  <div class="category-controls">
+
+    <button
+      class="category-btn active"
+      data-category="All"
+    >
+      All
+    </button>
+
+    <button
+      class="category-btn"
+      data-category="Disaster"
+    >
+      Disaster
+    </button>
+
+    <button
+      class="category-btn"
+      data-category="Industry"
+    >
+      Industry
+    </button>
+
+    <button
+      class="category-btn"
+      data-category="Local History"
+    >
+      Local History
+    </button>
+
+    <button
+      class="category-btn"
+      data-category="Early History"
+    >
+      Early History
+    </button>
+
+
+
+  </div>
+
+  <p id="storyCount" class="story-count">
+    Explore the map to discover Wisconsin history.
+  </p>
+
+</section>
+
+    <section class="map-section">
+      <div id="map"></div>
+    </section>
+
+<section
+  id="closestStory"
+  class="closest-story hidden"
+>
+  <p class="closest-eyebrow">
+    📍 CLOSEST STORY TO YOU
+  </p>
+
+  <h2 id="closestTitle"></h2>
+
+  <p id="closestDistance"></p>
+
+  <button
+    id="closestStoryBtn"
+    class="closest-story-btn"
+  >
+    Show Me →
+  </button>
+</section>
+
+<section class="story-controls">
+
+  <button
+  type="button"
+  id="surpriseBtn"
+  class="surprise-btn"
+>
+  <span class="cow-icon">🐄</span>
+  <span>Tell Me Something</span>
+</button>
+
+  <button
+  type="button"
+  id="exploreBtn"
+  class="explore-btn"
+>
+  📍 Explore Somewhere
+</button>
+
+</section>
+    <section id="storyCard" class="story-card hidden">
+
+  <div class="story-card-header">
+
+    <div>
+      <p id="storyCategory" class="story-category"></p>
+
+      <h2 id="storyTitle"></h2>
+    </div>
+
+    <button
+      id="storyCloseBtn"
+      class="story-close-btn"
+      aria-label="Close story"
+    >
+      ×
+    </button>
+
+  </div>
+
+  <div class="story-meta">
+  <span id="storyYear"></span>
+  <span id="storyLocation"></span>
+  <span id="storyDistance"></span>
+</div>
+
+  <div class="story-divider"></div>
+
+<div id="storyImageWrap" class="story-image-wrap hidden">
+  <img
+    id="storyImage"
+    class="story-image"
+    src=""
+    alt=""
+  />
+
+  <p id="storyImageCredit" class="story-image-credit"></p>
+</div>
+
+<p id="storySummary"></p>
+
+  <div class="story-footer">
+
+    <p class="story-source">
+      <span class="story-source-label">Historical Source</span>
+      <span id="storySource"></span>
+    </p>
+
+    <a
+      id="storySourceLink"
+      class="story-source-link"
+      href="#"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      View Source →
+    </a>
+
+  </div>
+
+</section>
+
+  </main>
+
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+  </script>
+
+  <script src="js/app.js?v=4"></script>
+
+</body>
+</html>
